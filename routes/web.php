@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::prefix('news')->group(function () {
         ->name('news.store');
 });
 
+Route::resource('order', OrderController::class);
 
 Route::get('/categories', [CategoryController::class, 'index'])
     ->name('categories');

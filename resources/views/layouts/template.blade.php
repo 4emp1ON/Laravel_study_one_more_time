@@ -13,5 +13,6 @@
     </div>
     <x-footer/>
 </div>
+@yield('script')
 </body>
 </html>
