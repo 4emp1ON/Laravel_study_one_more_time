@@ -8,12 +8,12 @@
     <div class="pt-3 d-flex justify-content-lg-between flex-wrap">
         @forelse ($news as $post)
             <div class="card border-dark mb-3" style="max-width: 20rem;">
-                <div class="card-header">{{ $post['author'] }}</div>
+                <div class="card-header">{{ $post->author }}</div>
                 <div class="card-body">
-                    <a href="{{ route('news.show', $post['id']) }}">
-                        <h4 class="card-title">{{ $post['title'] }}</h4>
+                    <a href="{{ route('news.show', $post->id) }}">
+                        <h4 class="card-title">{{ ucfirst($post->title) }}</h4>
                     </a>
-                    <p class="card-text">{{ $post['text'] }}</p>
+                    <p class="card-text">{{ ucfirst($post->text) }}</p>
                 </div>
             </div>
         @empty
