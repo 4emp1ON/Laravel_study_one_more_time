@@ -43,7 +43,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = DB::select('SELECT id, title, author, body as text, category_id FROM homestead.news');
+        $news = DB::select('SELECT id, title, author, body as text, category_id FROM news');
         return view('news/index', ['news' => $news]);
     }
 
