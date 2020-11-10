@@ -1,10 +1,11 @@
 @extends('layouts/template')
 
 @section('title')
-    Новости
+    Категории
 @endsection
 
 @section('content')
+    <h1 class="mt-3">Новости категории: {{ ucfirst($category->name) }}</h1>
     <div class="pt-3 d-flex justify-content-lg-between flex-wrap">
         @forelse ($news as $post)
             <div class="card border-dark mb-3" style="max-width: 20rem;">
@@ -26,4 +27,5 @@
             </div>
         @endforelse
     </div>
+    <a class="btn btn-primary btn-lg" href="{{ url()->previous() }}" role="button">Back</a>
 @endsection

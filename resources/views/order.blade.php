@@ -45,13 +45,5 @@
             mask: '+{7}(000)000-00-00'
         };
         const mask = IMask(maskedElement, maskOptions);
-
-        setInterval(hideAlert, 2000);
-
-
-        function hideAlert() {
-            const el = document.querySelector('.alert');
-            el.remove();
-        }
     </script>
 @endsection

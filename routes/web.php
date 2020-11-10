@@ -34,12 +34,9 @@ Route::prefix('news')->group(function () {
 
 Route::resource('order', OrderController::class);
 
-Route::get('/categories', [CategoryController::class, 'index'])
-    ->name('categories');
+Route::resource('/category', CategoryController::class);
 
-Route::get('/categories/{name}', [CategoryController::class, 'show'])
-    ->name('category.show')
-    ->where('name', '[a-z]+');
+
 
 Auth::routes();
 
