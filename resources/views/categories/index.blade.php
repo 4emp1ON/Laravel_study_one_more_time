@@ -16,7 +16,7 @@
                             <a href="{{ route('category.edit', $category->id) }}">
                                 <div class="btn btn-warning">Edit</div>
                             </a>
-                            <form action="{{ route('category.destroy', $category->id) }}" method="POST">
+                            <form action="{{ route('category.destroy', $category) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger ml-1">DELETE</button>

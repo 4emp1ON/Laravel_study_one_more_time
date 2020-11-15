@@ -15,7 +15,7 @@
                     <a class="nav-link" href="{{ route('news') }}">Новости</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('news.create') }}">Добавить новость</a>
+                    <a class="nav-link" href="{{ route('admin_news.create') }}">Добавить новость</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('category.index') }}">Категории</a>

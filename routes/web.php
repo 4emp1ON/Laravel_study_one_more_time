@@ -32,9 +32,13 @@ Route::prefix('news')->group(function () {
         ->name('news.store');
 });
 
+Route::prefix('admin')->group(function () {
+    Route::resource('admin_news', \App\Http\Controllers\Admin\NewsController::class);
+    Route::resource('category', CategoryController::class);
+});
+
 Route::resource('order', OrderController::class);
 
-Route::resource('/category', CategoryController::class);
 
 
 

@@ -27,7 +27,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('news/create');
+        //
     }
 
     /**
@@ -38,14 +38,7 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        $news = $this->news;
-        $newPost['id'] = count($news) + 1;
-        $newPost['title'] = $request->input('title');
-        $newPost['text'] = $request->input('text');
-        $newPost['author'] = $request->input('author');
-        array_push($this->news, $newPost);
-//        dd($this->news);
-        return redirect('news');
+        //
     }
 
     /**
